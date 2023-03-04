@@ -1,27 +1,12 @@
 const link = 'https://leetcode.com/problems/two-sum/';
 
 var twoSum = function(nums, target) {
-  let arr = [... nums];
-  let too1 = []
-  
-  nums.forEach((el,i) => {
-    if(!too1.length) {
-      const too = nums.reduce((prev, curr, currentIdex)  => {
-        if(too1.length == 0) {
-          if(curr + nums[i] == target) {
-            too1.push(i, currentIdex)
+  for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+          if (nums[i] + nums[j] == target) {
+              return [i, j]
           }
-        }
-        return prev + curr
-      },0)
-    }
-  })
-  
-  return too1;
+      }k
+  }
 };
-
-const arr = [3,2,4];
-
-console.log( twoSum(arr, 6));
-
-
+ 
